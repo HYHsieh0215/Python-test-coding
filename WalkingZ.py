@@ -1,6 +1,9 @@
+import os
+DirPath = os.path.abspath(os.getcwd())
+print('File location is ' + DirPath)
 DeviceName = input("Device Name is ")
 Pins_Cnt =input("Digital Pins count is ")
-Path = DeviceName + '_WalkingZ_'+ Pins_Cnt + '.atp'
+Path = DirPath + '/' + DeviceName + '_WalkingZ_'+ Pins_Cnt + '.atp'
 f = open(Path,'w')
 print('import tset tset_WalkZ;')
 f.write('import tset tset_WalkZ;\n')
